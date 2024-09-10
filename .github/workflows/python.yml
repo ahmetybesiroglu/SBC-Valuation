@@ -49,3 +49,7 @@ jobs:
     - name: Lint Code
       run: |
         poetry run black --check .
+
+    - name: Run Main Script
+      run: |
+        poetry run python sbc_valuation/run.py
