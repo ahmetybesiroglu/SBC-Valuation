@@ -1,0 +1,50 @@
+name: Python Package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        export PATH="$HOME/.local/bin:$PATH"
+
+    - name: Set Environment Variables
+      run: |
+        echo "AIRTABLE_API_KEY=${{ secrets.AIRTABLE_API_KEY }}" >> $GITHUB_ENV
+        echo "BASE_ID=${{ secrets.BASE_ID }}" >> $GITHUB_ENV
+        echo "TRANCHES_TABLE_ID=${{ secrets.TRANCHES_TABLE_ID }}" >> $GITHUB_ENV
+        echo "OPTION_VALUATIONS_TABLE_ID=${{ secrets.OPTION_VALUATIONS_TABLE_ID }}" >> $GITHUB_ENV
+        echo "VOLATILITY_DATA_TABLE_ID=${{ secrets.VOLATILITY_DATA_TABLE_ID }}" >> $GITHUB_ENV
+        echo "PUBLIC_COMP_SET_TABLE_ID=${{ secrets.PUBLIC_COMP_SET_TABLE_ID }}" >> $GITHUB_ENV
+
+    - name: Install Dependencies
+      run: |
+        poetry install
+
+    - name: Run Tests
+      run: |
+        poetry run pytest --cov=./
+
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: coverage/
