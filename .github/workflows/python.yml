@@ -1,7 +1,7 @@
 name: Python Package
 
 on:
-  workflow_dispatch:  # This allows you to trigger the workflow manually
+  workflow_dispatch:
 
 jobs:
   test:
