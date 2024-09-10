@@ -1,8 +1,8 @@
 
 # SBC Options Valuation
 
-![Build Status](https://github.com/yourusername/SBC-Valuation/actions/workflows/python.yml/badge.svg)
-![Coverage](https://codecov.io/gh/yourusername/SBC-Valuation/branch/main/graph/badge.svg)
+![Build Status](https://github.com/ahmetybesiroglu/SBC-Valuation/actions/workflows/python.yml/badge.svg)
+![Coverage](https://codecov.io/gh/ahmetybesiroglu/SBC-Valuation/branch/main/graph/badge.svg)
 ![GitHub Pages](https://img.shields.io/website?down_color=red&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fyourusername.github.io%2FSBC-Valuation)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
