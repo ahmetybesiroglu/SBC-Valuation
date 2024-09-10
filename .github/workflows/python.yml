@@ -47,3 +47,8 @@ jobs:
     - name: Lint Code
       run: |
         poetry run black --check .
+
+    # Run your main run.py script after tests and linting
+    - name: Run Main Script
+      run: |
+        poetry run python sbc_valuation/run.py

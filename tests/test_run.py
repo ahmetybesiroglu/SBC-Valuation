@@ -110,7 +110,7 @@ def test_black_scholes_zero_volatility():
     assert black_scholes(S_out_of_money, K, T, r, sigma) == 0.0
 
 
-# 12. Test airtable integration
+# 12. Test airtable integration with mock API
 @patch("pyairtable.Api")
 def test_airtable_integration(mock_api):
     # Mock the `table.all()` method to return a list of valuation records
