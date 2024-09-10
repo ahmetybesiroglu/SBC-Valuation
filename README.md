@@ -6,6 +6,10 @@
 ![ReadTheDocs](https://img.shields.io/website?down_color=red&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fsbc-valuation.readthedocs.io%2Fen%2Flatest)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+## Documentation
+
+You can view the full documentation [here](https://sbc-valuation.readthedocs.io/en/latest/).
+
 ## Overview
 
 This project automates the valuation of stock-based compensation (SBC) options using the Black-Scholes model. It integrates with Airtable for data management, fetching historical stock prices from Yahoo Finance for volatility calculations, and treasury yields for determining risk-free rates. The entire process is streamlined within Airtable, with calculated values being stored back for easy reference.
@@ -172,7 +176,7 @@ The script will process all valuation records that have missing option values an
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
