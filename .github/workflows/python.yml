@@ -1,4 +1,4 @@
-name: Python Package
+name: SBC-Valuation CI
 
 on:
   workflow_dispatch:
