@@ -1,12 +1,7 @@
 name: Python Package
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:  # This allows you to trigger the workflow manually
 
 jobs:
   test:
@@ -52,14 +47,3 @@ jobs:
     - name: Lint Code
       run: |
         poetry run black --check .
-
-    - name: Build Documentation
-      run: |
-        poetry run sphinx-build -b html source build/html
-
-    - name: Deploy Documentation to GitHub Pages
-      if: ${{ github.ref == 'refs/heads/main' }}
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/html
