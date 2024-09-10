@@ -1,9 +1,5 @@
 repos:
   - repo: https://github.com/psf/black
-    rev: stable
+    rev: 24.8.0  # Use the latest stable version of Black at the time
     hooks:
       - id: black
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.2
-    hooks:
-      - id: flake8
