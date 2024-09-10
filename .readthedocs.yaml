@@ -1,7 +1,3 @@
-# .readthedocs.yaml
-# Read the Docs configuration file
-# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
-
 version: 2
 
 build:
@@ -19,9 +15,9 @@ sphinx:
   configuration: source/conf.py  # This should match your project structure
 
 formats:
-  - html
-  - pdf
+  - pdf  # Optionally, you can also add epub if desired
 
-# Optionally, if you don't want PDF:
+# Optionally, if you don't want additional formats, you can omit the formats section altogether
 # formats:
-#   - html
+#   - pdf
+#   - epub
